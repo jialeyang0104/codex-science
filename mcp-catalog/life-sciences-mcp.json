@@ -1,0 +1,112 @@
+{
+  "source": "anthropics/life-sciences",
+  "marketplace": "life-sciences",
+  "connectors": [
+    {
+      "name": "pubmed",
+      "type": "http",
+      "url": "https://pubmed.mcp.claude.com/mcp",
+      "function": "Search biomedical literature and research articles from PubMed.",
+      "auth": "none in the Claude marketplace"
+    },
+    {
+      "name": "biorxiv",
+      "type": "http",
+      "url": "https://mcp.deepsense.ai/biorxiv/mcp",
+      "function": "Access bioRxiv and medRxiv preprint data.",
+      "auth": "provider-dependent"
+    },
+    {
+      "name": "clinical-trials",
+      "type": "http",
+      "url": "https://mcp.deepsense.ai/clinical_trials/mcp",
+      "function": "Access ClinicalTrials.gov data.",
+      "auth": "provider-dependent"
+    },
+    {
+      "name": "chembl",
+      "type": "http",
+      "url": "https://mcp.deepsense.ai/chembl/mcp",
+      "function": "Access ChEMBL bioactivity and drug-like compound data.",
+      "auth": "provider-dependent"
+    },
+    {
+      "name": "open-targets",
+      "type": "http",
+      "url": "https://mcp.platform.opentargets.org/mcp",
+      "function": "Drug target discovery and prioritization.",
+      "auth": "provider-dependent"
+    },
+    {
+      "name": "biorender",
+      "type": "http",
+      "url": "https://mcp.services.biorender.com/mcp",
+      "function": "Create and access scientific illustrations.",
+      "auth": "BioRender account"
+    },
+    {
+      "name": "synapse",
+      "type": "http",
+      "url": "https://mcp.synapse.org/mcp",
+      "function": "Collaborative research data management.",
+      "auth": "Synapse account"
+    },
+    {
+      "name": "wiley-scholar-gateway",
+      "type": "http",
+      "url": "https://connector.scholargateway.ai/mcp",
+      "function": "Access academic research and publications.",
+      "auth": "Scholar Gateway account"
+    },
+    {
+      "name": "consensus",
+      "type": "http",
+      "url": "https://mcp.consensus.app/mcp",
+      "function": "AI-powered search across peer-reviewed scientific research papers.",
+      "auth": "Consensus account"
+    },
+    {
+      "name": "10x-genomics",
+      "type": "mcpb",
+      "url": "https://github.com/10XGenomics/txg-mcp/releases/latest/download/txg-node.mcpb",
+      "function": "Access 10x Genomics Cloud analysis data and workflows.",
+      "auth": "10x Genomics Cloud account and access token"
+    },
+    {
+      "name": "tooluniverse",
+      "type": "mcpb",
+      "url": "https://github.com/mims-harvard/ToolUniverse/releases/download/mcpb/tooluniverse.mcpb",
+      "function": "Scientific discovery and automation tool-use platform.",
+      "auth": "provider-dependent"
+    },
+    {
+      "name": "owkin",
+      "type": "http",
+      "url": "https://mcp.k.owkin.com/mcp",
+      "function": "Interact with biology AI agents.",
+      "auth": "Owkin service access"
+    },
+    {
+      "name": "medidata",
+      "type": "http",
+      "url": "https://mcp.imedidata.com/mcp",
+      "function": "Medidata platform help and predictive site ranking.",
+      "auth": "Medidata access"
+    },
+    {
+      "name": "cortellis",
+      "type": "http",
+      "url": "https://api.clarivate.com/lifesciences/mcp-regulatory/mcp",
+      "function": "Global drug regulatory intelligence.",
+      "auth": "Clarivate Cortellis subscription"
+    },
+    {
+      "name": "adisinsight",
+      "type": "http",
+      "url": "https://adisinsight-mcp.springer.com/mcp",
+      "function": "Drug development pipeline, clinical trials, safety, and deals intelligence.",
+      "auth": "Springer Nature AdisInsight subscription"
+    }
+  ]
+}
+

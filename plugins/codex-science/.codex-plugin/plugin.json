@@ -1,0 +1,39 @@
+{
+  "name": "codex-science",
+  "version": "0.1.0",
+  "description": "Codex-native science workflow orchestrator with life-sciences skills, MCP connector catalog, and research-to-execution routing.",
+  "author": {
+    "name": "jialeyang0104"
+  },
+  "repository": "https://github.com/jialeyang0104/codex-science",
+  "license": "Apache-2.0",
+  "keywords": [
+    "science",
+    "life-sciences",
+    "research",
+    "biomedicine",
+    "clinical-trials",
+    "single-cell",
+    "nextflow",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Codex Science",
+    "shortDescription": "Research strategy, literature, clinical, and omics workflows for Codex",
+    "longDescription": "Codex Science replicates the Claude Science life-sciences workflow as a Codex-native orchestration skill package. It routes scientific requests across research ideation, literature evidence, clinical protocols, single-cell analysis, nf-core pipelines, scvi-tools modeling, and instrument data standardization, while documenting optional MCP connectors and authentication needs.",
+    "developerName": "jialeyang0104",
+    "category": "Education & Research",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use Codex Science to evaluate this research idea",
+      "Use Codex Science to plan an OMIX or single-cell analysis",
+      "Use Codex Science to draft a clinical study protocol"
+    ],
+    "brandColor": "#2563EB",
+    "screenshots": []
+  }
+}
