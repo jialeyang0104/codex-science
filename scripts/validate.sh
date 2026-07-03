@@ -29,9 +29,10 @@ if [ -z "$python_bin" ]; then
   exit 1
 fi
 
-"$python_bin" -m json.tool "$repo_root/.agents/plugins/marketplace.json" >/dev/null
-"$python_bin" -m json.tool "$repo_root/plugins/codex-science/.codex-plugin/plugin.json" >/dev/null
-"$python_bin" -m json.tool "$repo_root/mcp-catalog/life-sciences-mcp.json" >/dev/null
+find "$repo_root/.agents" "$repo_root/plugins" "$repo_root/mcp-catalog" "$repo_root/workflow-catalog" \
+  -name '*.json' -type f | sort | while read -r json_file; do
+  "$python_bin" -m json.tool "$json_file" >/dev/null
+done
 
 find "$repo_root/plugins/codex-science/skills" -mindepth 1 -maxdepth 1 -type d | sort | while read -r skill_dir; do
   [ -f "$skill_dir/SKILL.md" ] || continue

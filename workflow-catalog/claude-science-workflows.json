@@ -1,0 +1,114 @@
+{
+  "name": "claude-science-workflows",
+  "audit_date": "2026-07-03",
+  "source": "/Users/yangjiale/.claude-science/skills",
+  "sensitive_paths_excluded": [
+    ".oauth-tokens/",
+    "encryption.key",
+    ".key-backups/",
+    "raw logs",
+    "private workspace and artifact contents"
+  ],
+  "summary": {
+    "total_skills": 34,
+    "codex_science_strategy": "Port procedural workflow knowledge, document runtime-dependent features, and keep credentials or private user state out of the repository."
+  },
+  "categories": [
+    {
+      "id": "portable-life-sciences",
+      "status": "vendored",
+      "skills": [
+        "clinical-trial-protocol-skill",
+        "instrument-data-to-allotrope",
+        "nextflow-development",
+        "scientific-problem-selection",
+        "scvi-tools",
+        "single-cell-rna-qc"
+      ]
+    },
+    {
+      "id": "literature-documents-figures",
+      "status": "documented-for-codex",
+      "skills": [
+        "literature-review",
+        "pdf-explore",
+        "figure-style",
+        "figure-composer",
+        "paper-narrative",
+        "indication-dossier"
+      ]
+    },
+    {
+      "id": "remote-compute-and-endpoints",
+      "status": "documented-for-codex",
+      "skills": [
+        "compute-env-setup",
+        "remote-compute-ssh",
+        "remote-compute-modal",
+        "managed-model-endpoints",
+        "using-model-endpoint"
+      ]
+    },
+    {
+      "id": "biomodels",
+      "status": "cataloged-for-routing",
+      "skills": [
+        "alphafold2",
+        "boltz",
+        "borzoi",
+        "chai1",
+        "diffdock",
+        "esmfold2",
+        "evo2",
+        "fair-esm2",
+        "ligandmpnn",
+        "openfold3",
+        "proteinmpnn",
+        "scgpt",
+        "solublempnn"
+      ]
+    },
+    {
+      "id": "runtime-customization",
+      "status": "runtime-specific",
+      "skills": [
+        "customize",
+        "product-self-knowledge",
+        "self-awareness",
+        "skill-creator"
+      ]
+    }
+  ],
+  "workflow_patterns": [
+    {
+      "pattern": "progressive-disclosure-skills",
+      "codex_action": "Keep orchestrator instructions short and route to reference files only when needed."
+    },
+    {
+      "pattern": "parse-once-document-work",
+      "codex_action": "Extract PDF text/page maps once, cache intermediate files, and synthesize from page-tagged evidence."
+    },
+    {
+      "pattern": "retrieval-first-literature",
+      "codex_action": "Search and verify current primary sources before writing reviews or clinical claims."
+    },
+    {
+      "pattern": "render-then-verify-figures",
+      "codex_action": "Inspect saved figures for data consistency, label geometry, color semantics, and perceptual legibility."
+    },
+    {
+      "pattern": "declarative-compute-envs",
+      "codex_action": "Record base images, package phases, cache paths, smoke tests, GPU witnesses, and provider gotchas."
+    },
+    {
+      "pattern": "resumable-waypoints",
+      "codex_action": "Use progress JSON plus phase waypoint files for dossiers, long evidence reviews, and multi-step analyses."
+    }
+  ],
+  "runtime_dependencies": [
+    "Claude Science host SDK calls such as host.query, host.compute, host.delegate, host.llm, host.view_image, host.model_endpoints",
+    "Claude Science compute_provider and repl kernels",
+    "Claude Science artifact and metadata database",
+    "User-configured credentials, host grants, remote providers, and managed endpoints"
+  ]
+}

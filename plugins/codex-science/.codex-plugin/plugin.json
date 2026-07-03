@@ -1,7 +1,7 @@
 {
   "name": "codex-science",
-  "version": "0.1.0",
-  "description": "Codex-native science workflow orchestrator with life-sciences skills, MCP connector catalog, and research-to-execution routing.",
+  "version": "0.2.0",
+  "description": "Codex-native science workflow orchestrator with life-sciences skills, Claude Science workflow parity references, MCP connector catalog, and research-to-execution routing.",
   "author": {
     "name": "jialeyang0104"
   },
@@ -15,13 +15,16 @@
     "clinical-trials",
     "single-cell",
     "nextflow",
+    "biomodels",
+    "literature-review",
+    "remote-compute",
     "mcp"
   ],
   "skills": "./skills/",
   "interface": {
     "displayName": "Codex Science",
-    "shortDescription": "Research strategy, literature, clinical, and omics workflows for Codex",
-    "longDescription": "Codex Science replicates the Claude Science life-sciences workflow as a Codex-native orchestration skill package. It routes scientific requests across research ideation, literature evidence, clinical protocols, single-cell analysis, nf-core pipelines, scvi-tools modeling, and instrument data standardization, while documenting optional MCP connectors and authentication needs.",
+    "shortDescription": "Claude Science-style research, literature, clinical, omics, biomodel, and compute workflows for Codex",
+    "longDescription": "Codex Science replicates the practical Claude Science workflow as a Codex-native orchestration skill package. It routes scientific requests across research ideation, literature evidence, PDF/document exploration, manuscript and figure work, indication dossiers, clinical protocols, single-cell analysis, nf-core pipelines, scvi-tools modeling, biomodel/remote-compute planning, and instrument data standardization, while documenting optional MCP connectors, workflow catalogs, credentials, and runtime boundaries.",
     "developerName": "jialeyang0104",
     "category": "Education & Research",
     "capabilities": [
@@ -30,7 +33,9 @@
     ],
     "defaultPrompt": [
       "Use Codex Science to evaluate this research idea",
+      "Use Codex Science to review this paper and extract the key evidence",
       "Use Codex Science to plan an OMIX or single-cell analysis",
+      "Use Codex Science to choose a biomodel and compute path",
       "Use Codex Science to draft a clinical study protocol"
     ],
     "brandColor": "#2563EB",
