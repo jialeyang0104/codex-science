@@ -20,6 +20,7 @@ The project now covers both layers of Claude Science:
 - [Quickstart](#quickstart)
 - [What This Is](#what-this-is)
 - [Skill Index](#skill-index)
+- [Desktop App](#desktop-app)
 - [Claude Science Workflow Parity](#claude-science-workflow-parity)
 - [Catalogs](#catalogs)
 - [Repository Layout](#repository-layout)
@@ -45,6 +46,28 @@ codex plugin add codex-science@codex-science
 ```
 
 Restart Codex or open a new thread after installation so the skills are visible in the next session.
+
+## Desktop App
+
+Codex Science also ships a desktop workbench for macOS and Windows. It is built with Electron and React, with provider profiles for OpenAI, DeepSeek, and custom OpenAI-compatible chat APIs.
+
+The app is designed for AI-assisted scientific work rather than as a generic chatbot:
+
+- workflow routing for evidence review, PDFs, manuscripts, clinical protocols, dossiers, single-cell, omics, biomodels, compute, instruments, and strategy
+- local provider profile storage through Electron safeStorage when available
+- configurable base URL, chat path, and model ID for changing provider catalogs
+- research guardrails for evidence, local data, compute assumptions, and citation integrity
+
+Build locally:
+
+```bash
+cd desktop
+npm install
+npm run typecheck
+npm run build
+```
+
+Release packaging is handled by [`.github/workflows/desktop-release.yml`](.github/workflows/desktop-release.yml), which builds macOS and Windows installers from `desktop-v*` tags.
 
 ## What This Is
 
@@ -100,6 +123,10 @@ codex-science/
   docs/
     claude-science-workflow.md
     codex-science-design.md
+  desktop/
+    src/
+    DESIGN_SYSTEM.md
+    RELEASE_NOTES.md
   mcp-catalog/
     life-sciences-mcp.json
   workflow-catalog/

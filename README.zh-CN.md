@@ -20,6 +20,7 @@ Codex Science 是一个面向 Codex 的科研工作流插件包，参考了 Clau
 - [快速开始](#快速开始)
 - [这是什么](#这是什么)
 - [技能索引](#技能索引)
+- [桌面 App](#桌面-app)
 - [Claude Science 工作流复刻](#claude-science-工作流复刻)
 - [目录文件](#目录文件)
 - [仓库结构](#仓库结构)
@@ -45,6 +46,28 @@ codex plugin add codex-science@codex-science
 ```
 
 安装后重启 Codex，或打开一个新对话，让技能列表在新会话中加载。
+
+## 桌面 App
+
+Codex Science 也包含一个面向 macOS 和 Windows 的桌面工作台。它基于 Electron 和 React，支持 OpenAI、DeepSeek，以及自定义 OpenAI-compatible Chat API。
+
+这个 App 的重点是 AI 辅助科研，而不是普通聊天：
+
+- 覆盖证据综述、PDF、论文、临床方案、dossier、单细胞、组学、生物模型、远程计算、仪器转换和科研策略等工作流
+- 在可用时通过 Electron safeStorage 本地保存 provider profile
+- 支持配置 base URL、chat path 和 model ID，以兼容不同供应商和变化中的模型目录
+- 内置证据优先、本地数据优先、计算假设和引用完整性等科研 guardrails
+
+本地构建：
+
+```bash
+cd desktop
+npm install
+npm run typecheck
+npm run build
+```
+
+Release 打包由 [`.github/workflows/desktop-release.yml`](.github/workflows/desktop-release.yml) 处理；推送 `desktop-v*` 标签后会构建 macOS 和 Windows 安装包。
 
 ## 这是什么
 
@@ -100,6 +123,10 @@ codex-science/
   docs/
     claude-science-workflow.md
     codex-science-design.md
+  desktop/
+    src/
+    DESIGN_SYSTEM.md
+    RELEASE_NOTES.md
   mcp-catalog/
     life-sciences-mcp.json
   workflow-catalog/
